@@ -22,6 +22,15 @@
             <img v-else :src="dog.message" style="width:300px">
 
         </div>
+        <div class="post2">
+            <h2>Random Pokemon</h2>
+            <p v-if="pokemon === undefined">Please wait while I fetch a pokemon</p>
+            <p v-else-if="name === undefined">Please wait for the pokemon to appear</p>
+            <div v-else>
+                <h3>{{name}}</h3>
+                <img :src="sprite" style="width:300px">
+            </div>
+        </div>
     </div>
 
 </div>
