@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>My Vue.JS App</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../static/script.js" defer> </script>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
+<h1>My Vue.JS App</h1>
+
+<div id="app">
+    <div v-if="error">
+        <h2>An Error Occurred, Please Try Again</h2>
+    </div>
+    <div v-else>
+        <div class="post">
+            <h2>Random Images of Dogs using Dog API</h2>
+            <p v-if="dog === undefined">Please wait while I fetch image of Dog</p>
+            <p v-else-if="dog.message === undefined">Please wait for the dog</p>
+            <img v-else :src="dog.message" style="width:300px">
+
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>

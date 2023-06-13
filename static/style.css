@@ -1,0 +1,10 @@
+body {
+    background-color: Grey;
+}
+.post {
+    background-color: LightBlue;
+    text-align: center;
+    magin: 10px;
+    padding: 20px;
+    border: 2px solid black;
+}
